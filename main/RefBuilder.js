@@ -23,7 +23,7 @@ function MyTabs() {
         component={ViewTab}
         options={{
           tabBarIcon: ({ color, size }) => (
-            <Ionicons name="wifi-sharp" color={color} size={size} />
+            <Ionicons name="briefcase" color={color} size={size} />
           ),
         }}
       />
