@@ -1,8 +1,8 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {CreateTab} from './TabScreens/tabCreate.js';
-import {ViewTab} from './TabScreens/tabView.js';
-import Ionicons from 'react-native-vector-icons/Ionicons.js'; // You can choose a different icon library
+import {ViewTab} from './TabScreens/tabView.js'; // You can choose a different icon library
+import {Image} from 'react-native';
 
 const Tab = createBottomTabNavigator();
 
@@ -13,8 +13,11 @@ function MyTabs() {
         name="Create"
         component={CreateTab}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="paper-plane" color={color} size={size} />
+          tabBarIcon: ({color, size}) => (
+            <Image
+              source={require('./assets/icons/paper.png')}
+              style={{width: size, height: size, tintColor: color}}
+            />
           ),
         }}
       />
@@ -22,8 +25,11 @@ function MyTabs() {
         name="View"
         component={ViewTab}
         options={{
-          tabBarIcon: ({ color, size }) => (
-            <Ionicons name="briefcase" color={color} size={size} />
+          tabBarIcon: ({color, size}) => (
+            <Image
+              source={require('./assets/icons/briefcase.png')}
+              style={{width: size, height: size, tintColor: color}}
+            />
           ),
         }}
       />
@@ -34,7 +40,7 @@ function MyTabs() {
 export default function App() {
   return (
     <NavigationContainer>
-      <MyTabs/>
+      <MyTabs />
     </NavigationContainer>
   );
 }
