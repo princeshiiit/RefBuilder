@@ -1,5 +1,5 @@
 //constants
-stateList=[
+export const stateList=[
     'Select a state',
     'STATE 1',
     'STATE 2',
@@ -7,7 +7,8 @@ stateList=[
     'STATE 4',
     'STATE 5',  
 ]
-countryList=[
+
+export const countryList=[
     'Select a country',
     'Afghanistan',
     'Albania',

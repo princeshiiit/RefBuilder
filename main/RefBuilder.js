@@ -1,7 +1,7 @@
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {CreateTab} from './TabScreens/tabCreate.js';
-import {ViewTab} from './TabScreens/tabView.js'; // You can choose a different icon library
+import {ViewTab} from './TabScreens/tabView.js';
 import {Image} from 'react-native';
 
 const Tab = createBottomTabNavigator();
